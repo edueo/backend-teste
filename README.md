@@ -31,7 +31,7 @@ A aplicação é apenas um CRUD sem usuários (não existe autenticação). Deve
 A interface de uso fica a critério do desenvolvedor. A UI/UX da aplicação não será avaliada.
 
 ## Requisitos:
-- A aplicação deve executar as operações de CRUD através de chamadas AJAX. É um diferencial positivo se a aplicação for uma SPA (single-page application). Outro diferencial 
+- A aplicação deve executar as operações de CRUD através de chamadas AJAX. É um diferencial positivo se a aplicação for uma SPA (single-page application). Outro diferencial bastante positivo é o frontend ser desenvolvido em AngularJS.
 - Backend desenvolvido em qualquer linguagem dinâmica. É um diferencial positivo se for desenvolvido em Python. É mais positivo ainda se utilizar o framework Django.
 - Processo de desenvolvimento versionado via Git em algum repositório público do github ou bitbucket.
 - Relatório de cobertura dos testes unitários de backend.
