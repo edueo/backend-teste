@@ -3,7 +3,6 @@
 > [![Logo Viva Decora](https://cdn.rawgit.com/vivadecora/backend-teste/master/vivadecora-logo.png)](https://www.vivadecora.com.br)
 >
 > Esse teste é público. Candidatos para o teste devem implementar a aplicação solicitada e criar uma issue com um link para um repositório com a solução do mesmo.
-> ![Estamos contratando front end](https://img.shields.io/badge/Atenção:-Estamos%20contratando-green.svg?style=flat-square)
 
 ## Objetivo do desafio
 Criar uma aplicação web que implemente um CRUD de veículos. Um veículo é um carro ou moto com as seguintes características:
