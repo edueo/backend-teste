@@ -27,22 +27,22 @@ A aplicação é apenas um CRUD sem usuários (não existe autenticação). Deve
 * Motos da Yamaha com kilometragem menor que 10000km;
 * Carros Chevrolet com motor maior que 1.4
 
-A interface de uso fica a critério do desenvolvedor. A UI/UX da aplicação não será avaliada.
+A interface de uso fica a critério do desenvolvedor. A UI/UX da aplicação não será avaliada, o únicos critérios que devem atendendidos são os requisitos funcionais. 
 
 ## Requisitos:
 - A aplicação deve executar as operações de CRUD através de chamadas AJAX. É um diferencial positivo se a aplicação for uma SPA (single-page application). Outro diferencial bastante positivo é o frontend ser desenvolvido em AngularJS.
-- Backend desenvolvido em qualquer linguagem dinâmica. É um diferencial positivo se for desenvolvido em Python. É mais positivo ainda se utilizar o framework Django.
+- Backend desenvolvido em qualquer linguagem dinamicamente tipada. É um diferencial positivo se for desenvolvido em Python. É mais positivo se utilizar o framework Django.
 - Processo de desenvolvimento versionado via Git em algum repositório público do github ou bitbucket.
 - Relatório de cobertura dos testes unitários de backend.
 - Readme que explique como rodar o projeto, como gerar o relatório de cobertura e como executar quaisquer scripts necessários.
 - A aplicação deve possuir um script que popula o banco inicialmente com alguns veículos para demonstração.
 
 ## Critérios de avaliação:
-- Modelagem do banco de dados. Você tem toda a liberdade de criar quantas tabelas ou campos achar necessários.
+- Modelagem do banco de dados. Você tem toda a liberdade de criar quantas tabelas ou campos considerar necessários.
 - Organização do código: desacoplamento e legibilidade contam.
 - Automatização de tarefas.
 - Flexibilidade do sistema para adição/remoção de funcionalidades.
-- O front só será avaliado segundo o código Javascript. Não se preocupe com o HTML/CSS.
+- O front só será avaliado segundo o código Javascript. Não se preocupe com o HTML/CSS, fique à vontade para usar qualquer framework ou bootstrap que achar conveniente.
 
 ## Como vamos avaliar:
 - Vamos subir a aplicação e acessar via localhost:<alguma-porta>. Vamos cadastrar/editar/deletar algumas entidades. Vamos listar os veículos segundo diferentes combinações de filtros. Vamos analisar as chamadas AJAX feitas durante essa utilização.
