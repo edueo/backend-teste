@@ -2,55 +2,100 @@
 
 > [![Logo Viva Decora](https://cdn.rawgit.com/vivadecora/backend-teste/master/vivadecora-logo.png)](https://www.vivadecora.com.br)
 >
-> Esse teste é público. Candidatos para o teste devem implementar a aplicação solicitada e criar uma issue com um link para um repositório com a solução do mesmo.
+> Esse teste é público. Candidatos para vagas na Viva Decora devem aplicar para a [posição disponível atualmente](https://www.linkedin.com/jobs/view/686354653) e responder este teste como parte do processo seletivo. A solução do teste deve estar disponível em um repositório online (Github, Bitbucket, etc) e o link deve ser encaminhado por **mensagem ou email**. Pode ser um repositório público ou privado com acesso para o avaliador. **Será desclassificado quem entregar a solução fazendo fork deste projeto ou criando uma issue no mesmo**.
 
 ## Objetivo do desafio
-Criar uma aplicação web que implemente um CRUD de veículos. Um veículo é um carro ou moto com as seguintes características:
+Implementar um programa que utilize *web scraping* para buscar informações de projetos públicos do Github e compile os dados obtidos em arquivos *.txt*. Esses arquivos devem incluir informações como quantidade de linhas (total e percentual) de cada extensão de arquivo e a estrutura de pastas do projeto.
 
-### Carro:
-- Montadora (Chevrolet, Ford, Honda, ...)
-- Modelo (Monza, Fusion, Maverick, ...)
-- Cor (azul, verde, vermelho, ...)
-- Kilometragem (0km, 5000km, 12000km, ...)
-- Motor (1.0, 1.4, 2.0, ...)
+### Entrada
+O programa deve ler uma lista de repositórios de um arquivo `repositories.txt` onde cada linha contém o caminho relativo do projeto: `<dono-do-projeto>/<nome-do-projeto>`
 
-### Moto:
-- Montadora (Ducati, Yamaha, Honda, ...)
-- Modelo (Burgman, Tenere, MT-03, ...)
-- Cor
-- Kilometragem
-- Motor (150, 660, 1200, ...)
+Exemplo:
+```txt
+frontpressorg/frontpress
+SambitAcharya/Mini-Projects
+```
 
-A aplicação é apenas um CRUD sem usuários (não existe autenticação). Deve ser possível:
-- Inserir, editar e deletar uma montadora, um modelo ou um veículo
-- Pesquisar os veículos disponíveis com a possibilidade de filtrar por quaisquer características ou combinação de características disponíveis. Também deve ser possível filtrar por faixas de valores. Por exemplo:
-* Motos da Yamaha com kilometragem menor que 10000km;
-* Carros Chevrolet com motor maior que 1.4
+Essa lista contém um **número qualquer** de caminhos para projetos no Github. Por exemplo, a entrada `frontpressorg/frontpress` corresponde ao projeto [Frontpress](https://github.com/frontpressorg/frontpress).
 
-A interface de uso fica a critério do desenvolvedor. A UI/UX da aplicação não será avaliada, o únicos critérios que devem atendendidos são os requisitos funcionais. 
+### Saída
+A saída do programa deve ser um arquivo *.txt* para cada um dos repositórios analisados. Esses arquivos devem ter um nome indique o repositório ao qual eles correspondem. 
 
-## Requisitos:
-- A aplicação deve executar as operações de CRUD através de chamadas AJAX. É um diferencial positivo se a aplicação for uma SPA (single-page application). Outro diferencial bastante positivo é o frontend ser desenvolvido em AngularJS.
-- Backend desenvolvido em qualquer linguagem dinamicamente tipada. É um diferencial positivo se for desenvolvido em Python. É mais positivo se utilizar o framework Django.
-- Processo de desenvolvimento versionado via Git em algum repositório público do github ou bitbucket.
-- Relatório de cobertura dos testes unitários de backend.
-- Readme que explique como rodar o projeto, como gerar o relatório de cobertura e como executar quaisquer scripts necessários.
-- A aplicação deve possuir um script que popula o banco inicialmente com alguns veículos para demonstração.
+Cada um desses arquivos deve conter as seguintes informações:
+- Caminho relativo do projeto. Exemplo: `frontpressorg/frontpress`
+- Quantidade total de linhas.
+- Quantidade total de Bytes.
+- Para cada extensão de arquivo, informar qual a quantidade de linhas e Bytes (total e percentual). Arquivos sem extensão definida (como `.gitignore`, `Dockerfile`, `Makefile`, ...) podem ser agrupados como `<outros>`, a critério do candidato. Exemplo:
+```
+Extensão   |     Linhas    |    Bytes
+js         |  17599 (96 %) | 31894 (79 %)
+md         |    202 ( 1 %) |     5 ( 0 %)
+html       |    130 ( 0 %) |  5703 (14 %)
+json       |     95 ( 0 %) |   465 ( 1 %)
+sh         |     75 ( 0 %) |   101 ( 0 %)
+<outros>   |     74 ( 0 %) |  1322 ( 3 %)
+sample     |     34 ( 0 %) |   787 ( 1 %)
+enc        |      0 ( 0 %) |     3 ( 0 %)
+``` 
 
-## Critérios de avaliação:
-- Modelagem do banco de dados. Você tem toda a liberdade de criar quantas tabelas ou campos considerar necessários.
-- Organização do código: desacoplamento e legibilidade contam.
-- Automatização de tarefas.
+- Estrutura de pastas do arquivo. Exemplo:
+```
+[Project frontpressorg/frontpress]
+|__ [ci]
+|   |__ compile.sh (5 linhas)
+|   |__ travis_deploy.sh (70 linhas)
+|__ [release]
+|   |__ frontpress.js (7341 linhas)
+|   |__ frontpress.min.js (3 linhas)
+|   |__ frontpress.v1.js (7343 linhas)
+|   |__ frontpress.v1.min.js (3 linhas)
+|__ [src]
+|   |__ [js]
+|   |   |__ [apis]
+|   |   |   |__ [configs-to-params]
+|   |   |   |   |__ [models]
+|   |   |   |   |   |__ configs-to-params.model.js (25 linhas)
+|   |   |   |   |__ configs-to-params.module.js (4 linhas)
+|   |   |   |__ [v1]
+|   |   |   |   |__ [api-manager-map]
+|   |   |   |   |   |__ [constants]
+|   |   |   |   |   |   |__ api-manager-map.constant.js (13 linhas)
+|   |   |   |   |   |__ api-manager-map.module.js (4 linhas)
+...
+... (apresentar a estrutura de arquivos completa na solução do teste)
+...
+```
+
+As informações podem ser apresentadas da forma como o candidato achar mais conveniente, desde que atenda os requisitos solicitados. Os exemplos têm como objetivo apenas deixar mais claro quais são as informações solicitadas. 
+
+### Requisitos
+
+Os seguintes requisitos são obrigatórios:
+- A aplicação deve ser implementada em Python e a descrição do projeto deve explicar todos os requisitos necessários executá-lo.
+- Caso haja testes unitários, também descrever no projeto como executá-los. 
+- Todas as informações devem ser obtidas do Github através de *web scraping*. **Não utilize nenhuma API**.
+- Processo de desenvolvimento versionado via Git em algum repositório público ou privado com acesso para o avaliador.
+
+Os seguintes requisitos são opcionais:
+- Relatório de cobertura dos testes unitários (com descrição sobre como gerá-lo).
+- Badge que indique o status da build (como o do [Tracis CI](https://docs.travis-ci.com/user/status-images/) ou [Codacy](https://support.codacy.com/hc/en-us/articles/212799365-Badges)).
+
+
+## Critérios de avaliação
+- Organização do código.
+- Performance.
 - Flexibilidade do sistema para adição/remoção de funcionalidades.
-- O front só será avaliado segundo o código Javascript. Não se preocupe com o HTML/CSS, fique à vontade para usar qualquer framework ou bootstrap que achar conveniente.
+- Apresentação das informações solicitadas: os dados são apresentados de forma clara e objetiva? 
 
-## Como vamos avaliar:
-- Vamos subir a aplicação e acessar via localhost:<alguma-porta>. Vamos cadastrar/editar/deletar algumas entidades. Vamos listar os veículos segundo diferentes combinações de filtros. Vamos analisar as chamadas AJAX feitas durante essa utilização.
-- Vamos analisar o relatório de cobertura da aplicação.
-- Vamos ler o código.
+### Como vamos avaliar
+- Vamos executar a solução utilizando um arquivo `repositories.txt` com alguns repositórios selecionados pelo nosso time e analisar se a saída gerada atende aos requisitos solicitados.
+- Mediremos o tempo médio de execução da solução proposta. Também tentaremos entender os gargalos da solução implementada e se qualquer otimização de performance comprometeu outros aspectos do código (como legibilidade ou desacoplamento).
+- Analisaremos os testes unitários e o relatório de cobertura da aplicação, caso estejam disponíveis.
+- Vamos analisar se o código segue as boas práticas de desenvolvimento, principalmente as boas práticas de desenvolvimento de código Python.
 
-## O que nós gostamos:
-- Arquitetura que favorece a escalabilidade do sistema.
+### O que nós gostamos
+- Desacoplamento entre componentes do sistema.
 - Hierarquia clara entre componentes.
+- Tanto legibilidade quanto performance importam, muitas vezes um não precisa comprometer o outro.
+- Testes unitário e ferramentas de integração que contribuam para a confiabilidade do projeto.
 - Diante de dúvidas sobre qual caminho seguir, buscamos inspiração no Zen do Python.
-- Gostamos do padrão REST, mas não ficamos limitado a ele.
