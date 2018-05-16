@@ -99,3 +99,6 @@ Os seguintes requisitos são opcionais:
 - Tanto legibilidade quanto performance importam, muitas vezes um não precisa comprometer o outro.
 - Testes unitário e ferramentas de integração que contribuam para a confiabilidade do projeto.
 - Diante de dúvidas sobre qual caminho seguir, buscamos inspiração no Zen do Python.
+
+### Dúvidas e sugestões
+Caso haja alguma dúvida ou sugestão sobre o teste, pode criar uma issue neste projeto.
