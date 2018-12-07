@@ -2,7 +2,7 @@
 
 > [![Logo Viva Decora](https://cdn.rawgit.com/vivadecora/backend-teste/master/vivadecora-logo.png)](https://www.vivadecora.com.br)
 >
-> Esse teste é público. Candidatos para vagas na Viva Decora devem aplicar para a [posição disponível atualmente](https://www.linkedin.com/jobs/view/686354653) e responder este teste como parte do processo seletivo. A solução do teste deve estar disponível em um repositório online (Github, Bitbucket, etc) e o link deve ser encaminhado por **mensagem ou email**. Pode ser um repositório público ou privado com acesso para o avaliador. **Será desclassificado quem entregar a solução fazendo fork deste projeto ou criando uma issue no mesmo**.
+> Esse teste é público. Candidatos para vagas na Viva Decora devem responder este teste como parte do processo seletivo. A solução do teste deve estar disponível em um repositório online (Github, Bitbucket, etc) e o link deve ser encaminhado por **mensagem ou email**. Pode ser um repositório público ou privado com acesso para o avaliador. **Será desclassificado quem entregar a solução fazendo fork deste projeto ou criando uma issue no mesmo**.
 
 ## Objetivo do desafio
 Implementar um programa que utilize *web scraping* para buscar informações de projetos públicos do Github e compile os dados obtidos em arquivos *.txt*. Esses arquivos devem incluir informações como quantidade de linhas (total e percentual) de cada extensão de arquivo e a estrutura de pastas do projeto.
