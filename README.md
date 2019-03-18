@@ -73,7 +73,7 @@ As informações podem ser apresentadas da forma como o candidato achar mais con
 Os seguintes requisitos são obrigatórios:
 - A aplicação deve ser implementada em Python e a descrição do projeto deve explicar todos os requisitos necessários executá-lo.
 - Caso haja testes unitários, também descrever no projeto como executá-los. 
-- Todas as informações devem ser obtidas do Github através de *web scraping*. **Não utilize nenhuma API**.
+- Todas as informações devem ser obtidas do Github através de *web scraping*. **Não utilize nenhuma API nem clone ou faça download do repositório**. 
 - Processo de desenvolvimento versionado via Git em algum repositório público ou privado com acesso para o avaliador.
 
 Os seguintes requisitos são opcionais:
