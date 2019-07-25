@@ -19,7 +19,7 @@ SambitAcharya/Mini-Projects
 Essa lista contém um **número qualquer** de caminhos para projetos no Github. Por exemplo, a entrada `frontpressorg/frontpress` corresponde ao projeto [Frontpress](https://github.com/frontpressorg/frontpress).
 
 ### Saída
-A saída do programa deve ser um arquivo *.txt* para cada um dos repositórios analisados. Esses arquivos devem ter um nome indique o repositório ao qual eles correspondem. 
+A saída do programa deve ser um arquivo *.txt* para cada um dos repositórios analisados. Esses arquivos devem ter um nome que indique o repositório ao qual eles correspondem. 
 
 Cada um desses arquivos deve conter as seguintes informações:
 - Caminho relativo do projeto. Exemplo: `frontpressorg/frontpress`
@@ -71,10 +71,10 @@ As informações podem ser apresentadas da forma como o candidato achar mais con
 ### Requisitos
 
 Os seguintes requisitos são obrigatórios:
-- A aplicação deve ser implementada em Python e a descrição do projeto deve explicar todos os requisitos necessários executá-lo.
-- Caso haja testes unitários, também descrever no projeto como executá-los. 
+- A aplicação deve ser implementada em Python e a descrição do projeto deve explicar todos os passos necessários para executá-lo.
+- Caso haja testes unitários, também descrever como executá-los. 
 - Todas as informações devem ser obtidas do Github através de *web scraping*. **Não utilize nenhuma API nem clone ou faça download do repositório**. 
-- Processo de desenvolvimento versionado via Git em algum repositório público ou privado com acesso para o avaliador.
+- Processo de desenvolvimento versionado via Git em um repositório público ou em um repositório privado com acesso para o avaliador.
 
 Os seguintes requisitos são opcionais:
 - Relatório de cobertura dos testes unitários (com descrição sobre como gerá-lo).
@@ -82,10 +82,11 @@ Os seguintes requisitos são opcionais:
 
 
 ## Critérios de avaliação
+- Apresentação das informações solicitadas de forma clara e objetiva.
 - Organização do código.
 - Performance.
 - Flexibilidade do sistema para adição/remoção de funcionalidades.
-- Apresentação das informações solicitadas: os dados são apresentados de forma clara e objetiva? 
+
 
 ### Como vamos avaliar
 - Vamos executar a solução utilizando um arquivo `repositories.txt` com alguns repositórios selecionados pelo nosso time e analisar se a saída gerada atende aos requisitos solicitados.
